@@ -1,0 +1,17 @@
+package ejercicios.clase2;
+
+import java.util.Scanner;
+
+public class Eje2Control {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Ingrese un valor");
+		int a = sc.nextInt();
+		System.out.println(a);
+		
+		
+
+	}
+
+}

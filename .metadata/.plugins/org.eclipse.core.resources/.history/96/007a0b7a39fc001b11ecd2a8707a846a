@@ -1,0 +1,32 @@
+package ejercicios.clase2;
+
+import java.util.Scanner;
+
+public class Eje2Control {
+
+	public static void main(String[] args) {
+		int mayor, menor, medio;
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Ingrese un valor");
+		int a = sc.nextInt();
+
+		System.out.println("Ingrese otro valor");
+		int b = sc.nextInt();
+
+		//System.out.println("Ingrese y uno más valor");
+		//int c = sc.nextInt();
+
+		if (a > b) {
+			mayor = a;
+			menor= b;
+		}
+		else {
+			mayor = b;
+			menor = a;
+		}
+		
+		
+	}
+
+}

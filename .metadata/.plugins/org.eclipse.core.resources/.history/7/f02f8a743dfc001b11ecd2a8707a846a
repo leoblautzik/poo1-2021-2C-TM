@@ -1,0 +1,43 @@
+package ejercicios.clase2;
+
+import java.util.Scanner;
+
+public class Eje2Control {
+
+	public static void main(String[] args) {
+		int mayor =0, menor = 0 , medio = 0;
+
+		int a = 14;
+
+		int b = 13;
+
+		int c = 12;
+
+		if (a > b && a > c)
+			mayor = a;
+		else if (b > c)
+			mayor = b;
+		else
+			mayor = c;
+
+		if (a < b && a < c)
+			menor = a;
+		else if (b < c)
+			menor = b;
+		else
+			menor = c;
+
+		if (a > b && a < c)
+			medio = a;
+		if (b > a && b < c)
+			medio = b;
+		if (c > b && c < a)
+			medio = c;
+
+		System.out.println(menor);
+		System.out.println(medio);
+		System.out.println(mayor);
+
+	}
+
+}

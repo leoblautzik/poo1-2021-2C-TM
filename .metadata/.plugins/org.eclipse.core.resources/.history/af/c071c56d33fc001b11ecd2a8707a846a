@@ -1,0 +1,29 @@
+package ejercicios.clase2;
+
+public class Fecha {
+	
+	private int fecha;
+	
+	public Fecha(int f) {
+		fecha = f;
+	}
+
+
+	public String dateVuelta() {
+		
+		int anio = fecha / 10000;
+		int dia = fecha % 100;
+		int mes = fecha / 100 % 100;
+				
+		return ("dia " + dia +", mes " + mes + ", año " + anio);
+			
+	}
+	
+
+	public static void main(String[] args) {
+		Fecha hoy = new Fecha(20210813);
+		
+		System.out.println(hoy.dateVuelta());
+	}
+
+}

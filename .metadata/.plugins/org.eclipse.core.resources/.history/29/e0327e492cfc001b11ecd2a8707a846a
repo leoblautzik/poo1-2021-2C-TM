@@ -1,0 +1,18 @@
+package ejercicios.clase2;
+
+public class Ejercicio4 {
+
+	public static void main(String[] args) {
+
+		int numero = 345;
+		boolean esPar;
+		esPar = numero % 2 == 0;
+		System.out.println(esPar);
+
+	}
+
+	// syso ctl + space
+	// main "
+	// ctl + shift + F formatea el código
+
+}

@@ -1,0 +1,13 @@
+package ejercicios.clase2;
+
+public class Ejercicio4 {
+
+	public static void main(String[] args) {
+		
+		int numero = 458;
+		boolean esPar = numero % 2 == 0;
+		System.out.println(esPar);
+		
+	}
+
+}

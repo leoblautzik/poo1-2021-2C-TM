@@ -1,0 +1,20 @@
+package ejercicios.clase2;
+
+public class Ejercicio4 {
+
+	public static void main(String[] args) {
+		
+		int numero = 45;
+		boolean esPar = false;
+		if(numero % 2 == 0)
+			esPar = true;
+		
+		System.out.println(esPar);
+		
+		
+		
+		System.out.println(esPar);
+		
+	}
+
+}
