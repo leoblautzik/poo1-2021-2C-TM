@@ -2,36 +2,36 @@ package geometria;
 
 public class Circulo {
 	
-	private double diametro;
-	private	Punto centro; 
-		
-	public Circulo(double radio, Punto centro) {
-		cambiarRadio(radio);
-		this.centro = centro;
+	private double radio;
+			
+	public Circulo(double radio) {
+		setRadio(radio);
 	}
 
-	public double obtenerRadio() {
-		return obtenerDiametro()/2;
+	public double getRadio() {
+		return this.radio;
 	}
 	
-	public void cambiarRadio(double nuevoRadio) {
-		cambiarDiametro(nuevoRadio * 2);
+	public void setRadio(double nuevoRadio) {
+		if(nuevoRadio <= 0)
+			throw new Error("Radio inválido");
+		this.radio = nuevoRadio;
 	}
 	
-	public void cambiarDiametro(double nuevoDiametro) {
-		diametro = nuevoDiametro;
+	public void setDiametro(double nuevoDiametro) {
+		this.radio = nuevoDiametro / 2;
 	}
 	
-	public double obtenerDiametro() {
-		return diametro;
+	public double getDiametro() {
+		return this.radio * 2;
 	}
 	
-	public double obtenerPerimetro() {
-		return 2 * Math.PI * obtenerRadio(); 
+	public double getPerimetro() {
+		return 2 * Math.PI * getRadio(); 
 	}
 	
-	public double obtenerArea() {
-		return Math.PI * Math.pow(obtenerRadio(), 2);
+	public double getArea() {
+		return Math.PI * Math.pow(getRadio(), 2);
 	}
 
 }

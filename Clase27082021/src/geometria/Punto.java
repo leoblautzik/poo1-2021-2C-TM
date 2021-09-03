@@ -1,5 +1,7 @@
 package geometria;
 
+import static java.lang.Math.*;
+
 public class Punto {
 	
 	private double x;
@@ -38,7 +40,18 @@ public class Punto {
 	
 	public boolean esElOrigen() {
 		return estaSobreX() && estaSobreY();
+		
 	}
 		
-
+	public static double distancia(Punto a, Punto b) {
+	
+		return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2)); 
+		
+	}
+	
+	public double distancia(Punto otro) {
+		return sqrt(pow(this.x - otro.x, 2) + pow(this.y - otro.y, 2));
+		
+	}
+	
 }
