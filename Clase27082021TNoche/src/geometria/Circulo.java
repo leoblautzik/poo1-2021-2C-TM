@@ -2,15 +2,16 @@ package geometria;
 
 public class Circulo {
 	
-	private double diametro;
-	private Punto centro;
+	private double radio;
 	
 	public Circulo(double radio) {
-		this.diametro = radio * 2;
+		if(radio <= 0)
+			throw new Error("Radio inválido");
+		this.radio = radio; 
 	}
 	
 	double obtenerRadio() {
-		return this.diametro / 2;
+		return this.radio;
 	}
 	
 	double obtenerDiametro() {
@@ -27,7 +28,7 @@ public class Circulo {
 
 	@Override
 	public String toString() {
-		return "Circulo [diametro=" + diametro + "]";
+		return "Circulo [radio =" + obtenerRadio() + "]";
 	}
 	
 	
