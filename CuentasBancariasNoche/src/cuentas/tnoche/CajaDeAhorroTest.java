@@ -1,4 +1,4 @@
-package cajaDeAhorro;
+package cuentas.tnoche;
 
 import static org.junit.Assert.*;
 
@@ -51,7 +51,7 @@ public class CajaDeAhorroTest {
 		miCuentaAhorro.extraer(2800);
 		double esperado = 1000 + 2500 - 2800;
 		assertEquals(esperado, miCuentaAhorro.consultarSaldo(), 0.01);
-		
+					
 	}
 	@Test
 	public void extraerJustitoTest() {

@@ -1,16 +1,16 @@
 package cubo;
 
 public class Cubo {
-	
+
 	private double lado;
-	
+
 	/*
 	 * post: inicializa el cubo a partir de la medida de lado dada
 	 */
 	public Cubo(double lado) {
 		setLado(lado);
 	}
-	
+
 	public Cubo() {
 		this(1);
 	}
@@ -50,7 +50,7 @@ public class Cubo {
 	 */
 	public double medirVolumen() {
 		return this.lado * this.medirSuperficieCara();
-		
+
 	}
 
 	/*
@@ -58,11 +58,11 @@ public class Cubo {
 	 */
 	public void cambiarVolumen(double volumen) {
 		setLado(Math.cbrt(volumen));
-		
+
 	}
 
 	private void setLado(double lado) {
-		if(lado <= 0)
+		if (lado <= 0)
 			throw new Error("Lado inválido");
 		this.lado = lado;
 	}
