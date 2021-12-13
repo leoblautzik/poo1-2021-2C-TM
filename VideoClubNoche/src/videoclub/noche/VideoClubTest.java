@@ -1,4 +1,4 @@
-package videoClub;
+package videoclub.noche;
 
 import static org.junit.Assert.*;
 
@@ -15,11 +15,22 @@ public class VideoClubTest {
 	@Before
 	public void setUp() throws Exception {
 		
-		volverAlFuturo = new Pelicula("Volver al Futuro", 1985, Genero.Accion, "Robert Zemeckis");
-		rapidosYfuriosos = new Pelicula("Rapidos y furiosos", 2001, Genero.Accion, "Rob Cohen");
+		volverAlFuturo = new Pelicula("Volver al Futuro", 1985, Genero.ACCION, "Robert Zemeckis");
+		rapidosYfuriosos = new Pelicula("Rapidos y furiosos", 2001, Genero.ACCION, "Rob Cohen");
+		
+	}
+	
+	@Test
+	public void crearPelisTest() {
+		assertNotNull(volverAlFuturo);
+		assertNotNull(rapidosYfuriosos);
+		
+		System.out.println(volverAlFuturo);
+		System.out.println(rapidosYfuriosos);
 		
 	}
 
+	
 	@Test
 	public void prestarPeliTest() {
 		assertFalse(volverAlFuturo.isEntregado());
@@ -38,23 +49,28 @@ public class VideoClubTest {
 		
 	}
 	
+	
+	
 	@Test
-	public void arrayDeVideoCosasTest() {
+	public void arrayDeVideGomasTest() {
+		
 		Pelicula [] cosas = new Pelicula[2];
 		cosas[0] = rapidosYfuriosos;
 		cosas[1] = volverAlFuturo;
 		
-		for (VideoCosa videoCosa : cosas) {
+		for (VideGoma videoCosa : cosas) {
 			System.out.println(videoCosa);
 		}
 		
 		Arrays.sort(cosas);
+		
 		System.out.println("---------------------");
 		
 		
-		for (VideoCosa videoCosa : cosas) {
+		for (VideGoma videoCosa : cosas) {
 			System.out.println(videoCosa);
 		}
 		
 	}
+	
 }
